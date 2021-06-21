@@ -2,6 +2,9 @@
 
     $text = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium facilis accusantium amet odit minima quos? Molestiae consectetur vel quisquam quis quasi ad, quae commodi magnam, ipsa aut, possimus nisi aspernatur.";
 
+    $bad_word = $_GET["bad_word"];
+    
+    $text2 = str_replace(strtolower($bad_word), "***", strtolower($text));
 ?>
 
 
@@ -15,7 +18,7 @@
 </head>
 <body>
     
-    <p> <?php echo $text; ?> </p>
-    <p>Lunghezza paragrafo: <?php echo strlen($text) ?></p>
+    <p> <?php echo $text2; ?> </p>
+    <p>Lunghezza paragrafo: <?php echo strlen($text2) ?></p>
 </body>
 </html>
