@@ -4,7 +4,7 @@
 
     $bad_word = $_GET["bad_word"];
     
-    $text2 = str_replace(strtolower($bad_word), "***", strtolower($text));
+    $text_censored = str_replace(strtolower($bad_word), "***", strtolower($text));
 ?>
 
 
@@ -18,7 +18,7 @@
 </head>
 <body>
     
-    <p> <?php echo $text2; ?> </p>
-    <p>Lunghezza paragrafo: <?php echo strlen($text2) ?></p>
+    <p> <?php echo $text_censored; ?> </p>
+    <p>Lunghezza paragrafo: <?php echo strlen($text_censored) ?></p>
 </body>
 </html>
